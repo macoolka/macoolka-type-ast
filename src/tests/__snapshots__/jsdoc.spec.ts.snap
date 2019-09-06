@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jsdoc parseJSDoc 1`] = `
+Object {
+  "description": "The property specifies the alignment for the selected item inside the flexible container.
+The property overrides the default alignment set by the container's align property.",
+  "tags": Array [],
+}
+`;
+
+exports[`jsdoc parseJSDoc 2`] = `
+Object {
+  "description": "The property specifies the alignment for the selected item inside the flexible container.
+The property overrides the default alignment set by the container's align property.",
+  "tags": Array [
+    Object {
+      "description": null,
+      "title": "typeclass",
+    },
+    Object {
+      "description": null,
+      "title": "data",
+    },
+  ],
+}
+`;
+
+exports[`jsdoc tagToRecord 1`] = `
+Object {
+  "ZH": Object {
+    "description": "a
+
+c",
+  },
+  "exmaple": Object {
+    "description": "abc",
+  },
+  "since": Object {
+    "description": "0.1.1",
+  },
+  "typeclass": Object {
+    "description": null,
+  },
+}
+`;

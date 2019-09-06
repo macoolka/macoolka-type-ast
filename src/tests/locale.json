@@ -1,0 +1,463 @@
+[
+  {
+    "path": [
+      "",
+      "home",
+      "fastspeeed",
+      "macoolka",
+      "core",
+      "macoolka-type-ast",
+      "src",
+      "tests",
+      "fixtures",
+      "Locale.ts"
+    ],
+    "name": "Locale",
+    "interfaces": [
+      {
+        "name": "A",
+        "isExported": true,
+        "signature": "export interface A{\n\n}",
+        "implements": [],
+        "methods": [],
+        "fields": [],
+        "description": [
+          "module desc"
+        ],
+        "examples": [],
+        "file": true,
+        "deprecated": false,
+        "ignore": false,
+        "reason": [],
+        "descriptions": {
+          "zh": [
+            "模块描述"
+          ]
+        },
+        "path": [],
+        "_kind": "interface"
+      },
+      {
+        "name": "B",
+        "isExported": true,
+        "signature": "export interface B{\n    \n}",
+        "implements": [],
+        "methods": [],
+        "fields": [],
+        "description": [],
+        "examples": [],
+        "file": false,
+        "deprecated": false,
+        "ignore": false,
+        "reason": [],
+        "descriptions": {},
+        "path": [],
+        "_kind": "interface"
+      },
+      {
+        "name": "Interface",
+        "isExported": true,
+        "signature": "export interface Interface extends A,B{\n    /**\n     * interface field desc \n     * @desczh\n     * 接口字段描述\n     */\n    string: string\n    /**\n     * interface method var desc\n     * @desczh\n     * 接口方法变量描述\n     */\n    add: () => void\n    /**\n     * interface method desc\n     * @desczh\n     * 接口方法描述\n     */\n    a():void\n}",
+        "implements": [
+          "A",
+          "B"
+        ],
+        "methods": [
+          {
+            "name": "a",
+            "signature": "a():void",
+            "required": true,
+            "type": {
+              "_kind": "type",
+              "value": "object",
+              "isArray": false,
+              "maybe": false,
+              "isArrayRequired": false,
+              "defaultEmptyArray": true
+            },
+            "description": [
+              "interface method desc"
+            ],
+            "examples": [],
+            "file": false,
+            "deprecated": false,
+            "ignore": false,
+            "reason": [],
+            "descriptions": {
+              "zh": [
+                "接口方法描述"
+              ]
+            },
+            "path": [],
+            "params": [],
+            "returnVoid": false,
+            "_kind": "method"
+          }
+        ],
+        "fields": [
+          {
+            "name": "add",
+            "signature": "add: () => void",
+            "required": true,
+            "type": {
+              "_kind": "type",
+              "value": "object",
+              "isArray": false,
+              "maybe": false,
+              "isArrayRequired": false,
+              "defaultEmptyArray": true
+            },
+            "description": [
+              "interface method var desc"
+            ],
+            "examples": [],
+            "file": false,
+            "deprecated": false,
+            "ignore": false,
+            "reason": [],
+            "descriptions": {
+              "zh": [
+                "接口方法变量描述"
+              ]
+            },
+            "path": [],
+            "_kind": "field",
+            "unique": false,
+            "id": false,
+            "readonly": false,
+            "order": true,
+            "exclusiveCreate": false,
+            "exclusiveUpdate": false,
+            "exclusiveWhere": false
+          },
+          {
+            "name": "string",
+            "signature": "string: string",
+            "required": true,
+            "type": {
+              "_kind": "string",
+              "isArray": false,
+              "maybe": false,
+              "isArrayRequired": false,
+              "defaultEmptyArray": true
+            },
+            "description": [
+              "interface field desc"
+            ],
+            "examples": [],
+            "file": false,
+            "deprecated": false,
+            "ignore": false,
+            "reason": [],
+            "descriptions": {
+              "zh": [
+                "接口字段描述"
+              ]
+            },
+            "path": [],
+            "_kind": "field",
+            "unique": false,
+            "id": false,
+            "readonly": false,
+            "order": true,
+            "exclusiveCreate": false,
+            "exclusiveUpdate": false,
+            "exclusiveWhere": false
+          }
+        ],
+        "since": "0.2.0",
+        "description": [
+          "interface desc"
+        ],
+        "examples": [],
+        "file": false,
+        "deprecated": false,
+        "ignore": true,
+        "reason": [],
+        "descriptions": {
+          "zh": [
+            "接口描述"
+          ]
+        },
+        "path": [],
+        "_kind": "interface"
+      }
+    ],
+    "typealiases": [
+      {
+        "name": "Type",
+        "signature": "export type Type = {\n\n \n}",
+        "description": [
+          "typeAlias desc"
+        ],
+        "examples": [],
+        "file": false,
+        "deprecated": false,
+        "ignore": false,
+        "reason": [],
+        "descriptions": {
+          "zh": [
+            "类型描述"
+          ]
+        },
+        "path": [],
+        "isExported": true,
+        "fields": [],
+        "methods": [],
+        "type": "string",
+        "required": false,
+        "_kind": "typealias"
+      }
+    ],
+    "classes": [
+      {
+        "name": "Class",
+        "signature": "export class Class { ... }",
+        "fields": [
+          {
+            "name": "classfield",
+            "signature": "classfield: string = ''",
+            "description": [
+              "class field desc"
+            ],
+            "examples": [],
+            "file": false,
+            "deprecated": false,
+            "ignore": false,
+            "reason": [],
+            "descriptions": {
+              "zh": [
+                "类字段描述"
+              ]
+            },
+            "path": [],
+            "type": "string",
+            "required": false,
+            "_kind": "field",
+            "unique": false,
+            "id": false,
+            "readonly": false,
+            "order": true,
+            "exclusiveCreate": false,
+            "exclusiveUpdate": false,
+            "exclusiveWhere": false
+          }
+        ],
+        "methods": [
+          {
+            "name": "classMethod",
+            "signature": "classMethod( { ... }",
+            "description": [
+              "class method desc"
+            ],
+            "examples": [],
+            "file": false,
+            "deprecated": false,
+            "ignore": false,
+            "reason": [],
+            "descriptions": {
+              "zh": [
+                "类方法描述"
+              ]
+            },
+            "path": [],
+            "type": "string",
+            "required": false,
+            "params": [],
+            "returnVoid": false,
+            "_kind": "method"
+          }
+        ],
+        "staticMethods": [
+          {
+            "name": "classStaticMethod",
+            "signature": "static classStaticMethod( { ... }",
+            "description": [
+              "class static method desc"
+            ],
+            "examples": [],
+            "file": false,
+            "deprecated": false,
+            "ignore": false,
+            "reason": [],
+            "descriptions": {
+              "zh": [
+                "类静态方法描述"
+              ]
+            },
+            "path": [],
+            "type": "string",
+            "required": false,
+            "params": [],
+            "returnVoid": false,
+            "_kind": "staticmethod"
+          }
+        ],
+        "description": [],
+        "examples": [],
+        "file": false,
+        "deprecated": false,
+        "ignore": false,
+        "reason": [],
+        "descriptions": {},
+        "path": [],
+        "isExported": true,
+        "_kind": "class",
+        "implements": []
+      }
+    ],
+    "exports": [
+      {
+        "name": "exportmethod",
+        "signature": "() => any",
+        "description": [
+          "export function desc"
+        ],
+        "examples": [],
+        "file": false,
+        "deprecated": false,
+        "ignore": false,
+        "reason": [],
+        "descriptions": {
+          "zh": [
+            "导出函数描述"
+          ]
+        },
+        "path": [],
+        "_kind": "export"
+      },
+      {
+        "name": "exportvara",
+        "signature": "\"\"",
+        "description": [
+          "export constant desc"
+        ],
+        "examples": [],
+        "file": false,
+        "deprecated": false,
+        "ignore": false,
+        "reason": [],
+        "descriptions": {
+          "zh": [
+            "导出变量描述"
+          ]
+        },
+        "path": [],
+        "_kind": "export"
+      }
+    ],
+    "functions": [
+      {
+        "name": "exportmethod",
+        "signature": "export const exportmethod = () => ...",
+        "isExported": true,
+        "description": [
+          "export inner function desc"
+        ],
+        "examples": [],
+        "file": false,
+        "deprecated": false,
+        "ignore": false,
+        "reason": [],
+        "descriptions": {
+          "zh": [
+            "函数描述"
+          ]
+        },
+        "path": [],
+        "type": "string",
+        "required": false,
+        "params": [],
+        "returnVoid": false,
+        "_kind": "function"
+      },
+      {
+        "name": "functiona",
+        "signatures": [
+          "export function functiona( { ... }"
+        ],
+        "isExported": true,
+        "description": [
+          "function desc"
+        ],
+        "examples": [],
+        "file": false,
+        "deprecated": false,
+        "ignore": false,
+        "reason": [],
+        "descriptions": {
+          "zh": [
+            "函数描述"
+          ]
+        },
+        "path": [],
+        "type": "string",
+        "required": false,
+        "params": [],
+        "returnVoid": false,
+        "_kind": "function"
+      }
+    ],
+    "constants": [
+      {
+        "name": "constanta",
+        "signature": "export const constanta: 1 = ...",
+        "isExported": true,
+        "description": [
+          "constant desc"
+        ],
+        "examples": [],
+        "file": false,
+        "deprecated": false,
+        "ignore": false,
+        "reason": [],
+        "descriptions": {
+          "zh": [
+            "变量描述"
+          ]
+        },
+        "path": [],
+        "type": "string",
+        "required": false,
+        "_kind": "constant"
+      },
+      {
+        "name": "exportvara",
+        "signature": "export const exportvara: \"\" = ...",
+        "isExported": true,
+        "description": [
+          "inner constant desc"
+        ],
+        "examples": [],
+        "file": false,
+        "deprecated": false,
+        "ignore": false,
+        "reason": [],
+        "descriptions": {
+          "zh": [
+            "变量描述"
+          ]
+        },
+        "path": [],
+        "type": "string",
+        "required": false,
+        "_kind": "constant"
+      }
+    ],
+    "description": [
+      "module desc"
+    ],
+    "examples": [],
+    "file": true,
+    "deprecated": false,
+    "ignore": false,
+    "reason": [],
+    "descriptions": {
+      "zh": [
+        "模块描述"
+      ]
+    },
+    "_kind": "module",
+    "idUnique": false
+  }
+]
