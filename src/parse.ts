@@ -14,7 +14,7 @@ import * as E from 'fp-ts/lib/Either'
 import * as ast from 'ts-morph'
 import { parseJSDoc, tagToRecord } from './jsdoc'
 import { get } from 'macoolka-object'
-import { notEmpty } from 'macoolka-predicate'
+import { notEmpty, isFunction } from 'macoolka-predicate'
 import { array } from 'macoolka-collection'
 import {
     MMethod, MClass, MTypeAlias, MInterface, MModule, MConstant, MStaticMethod,
@@ -24,7 +24,6 @@ import { InputModule as Mi, io, Module } from 'macoolka-type-model'
 import { omit } from 'macoolka-object'
 import { MonidI18N, I18NValidation } from 'macoolka-i18n'
 import { FileWhereUniqueInput, showFile } from 'macoolka-store-core'
-import { } from 'macoolka-app/lib/'
 
 const Tags = {
     since: "since",
@@ -289,14 +288,32 @@ export const getType = (a: ast.Type, isArray: boolean = false): MValueable => {
 function getInteterfaceDeclarationSignature(id: ast.InterfaceDeclaration): string {
     return id.getText();
 }
+const getName = (a?: { getName: () => any }) => {
+    return pipe(
+        a,
+        O.fromNullable,
+        O.chain(a => pipe(
+            a.getName,
+            O.fromPredicate(isFunction),
+            O.map(_=> a.getName())
+        )),
+      
+        // O.
+        // O.chain(c=>)
+    )
 
+}
 function parseInterfaceDeclaration(id: ast.InterfaceDeclaration): MInterface {
     id.getProperties
     const interf: MInterface = {
         name: id.getName(),
         isExported: id.isExported(),
         signature: getInteterfaceDeclarationSignature(id),
-        implements: id.getBaseDeclarations().map(a => a.getName() ? a.getName()! : 'NoName'),
+        implements: pipe(
+            id.getBaseDeclarations(),
+            A.map(a => getName(a)),
+            A.compact
+        ),
         ...getintefaceChildren(id),
         ...pipe(
             id.getJsDocs().map(a => a.getText()),
@@ -805,6 +822,7 @@ export function parse(files: Array<FileWhereUniqueInput>): E.Either<MonidI18N, M
         paths,
         array.map(file => {
             const sourceFile = project.getSourceFile(file)!
+
             return _parse(file.split(path.sep), sourceFile)
         }),
         array.sort(ordModule),
